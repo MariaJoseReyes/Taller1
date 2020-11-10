@@ -27,7 +27,6 @@ public class Taller1 {
         int total = 0;
         for (int i=0; i< producto.length; i++){
             total = total +producto[i];
-
         }
         System.out.println("El numero total de productos que va a comprar son: "+total);
     }
@@ -35,9 +34,18 @@ public class Taller1 {
     public static void totalCompra (int [] producto){
         int compra = 0;
         for(int i=0; i< producto.length; i++){
-            compra = (500 + i*150)*producto[i];
+            compra = (500 + i*150)*producto[i] + compra;
         }
         System.out.println("El total es: $"+compra);
+    }
+
+    public static void detalleCompra(int [] producto){
+
+        for (int i=0; i< producto.length; i++){
+            int detallecompra =0;
+            detallecompra = (500 + i*150)*producto[i];
+            System.out.println("Cantidad producto[i] es "+producto[i]+" y el total de este producto es: $"+detallecompra);
+        }
     }
 
 }
