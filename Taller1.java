@@ -4,19 +4,29 @@ public class Taller1 {
     public static void main(String[] args) {
 
 
-        crearLargo();
-
-    }
-
-    public static void crearProducto (){
-        int largo = crearLargo();
-
-    }
-
-    public static int crearLargo(){
         Random azar = new Random ();
         int largo = azar.nextInt(20)+1;
-        System.out.println(largo);
-        return largo;
+        int [] producto = new int[largo];
+        agregarProducto(producto);
+
+        mostrarProducto(producto);
+
+    }
+
+
+
+    public static int[] agregarProducto (int[] producto){
+        Random azar = new Random ();
+
+        for (int i=0; i< producto.length; i++){
+            producto[i]=azar.nextInt(16);
+        }
+        return producto;
+
+    }
+
+    public static void mostrarProducto(int[] producto){
+
+
     }
 }
