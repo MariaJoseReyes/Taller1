@@ -7,13 +7,12 @@ public class Taller1 {
         Random azar = new Random ();
         int largo = azar.nextInt(20)+1;
         int [] producto = new int[largo];
+
         agregarProducto(producto);
-
         mostrarProducto(producto);
-
+        totalCompra(producto);
+        detalleCompra(producto);
     }
-
-
 
     public static int[] agregarProducto (int[] producto){
         Random azar = new Random ();
@@ -22,16 +21,23 @@ public class Taller1 {
             producto[i]=azar.nextInt(16);
         }
         return producto;
-
     }
 
     public static void mostrarProducto(int[] producto){
         int total = 0;
         for (int i=0; i< producto.length; i++){
             total = total +producto[i];
-            System.out.println("El numero total de productos que va a comprar son: "+total);
+
         }
+        System.out.println("El numero total de productos que va a comprar son: "+total);
     }
-    
+
+    public static void totalCompra (int [] producto){
+        int compra = 0;
+        for(int i=0; i< producto.length; i++){
+            compra = (500 + i*150)*producto[i];
+        }
+        System.out.println("El total es: $"+compra);
+    }
 
 }
