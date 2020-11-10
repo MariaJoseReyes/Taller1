@@ -26,7 +26,12 @@ public class Taller1 {
     }
 
     public static void mostrarProducto(int[] producto){
-
-
+        int total = 0;
+        for (int i=0; i< producto.length; i++){
+            total = total +producto[i];
+            System.out.println("El numero total de productos que va a comprar son: "+total);
+        }
     }
+    
+
 }
